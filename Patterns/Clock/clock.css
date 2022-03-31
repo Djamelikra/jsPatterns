@@ -5,14 +5,14 @@ body{
 }
 /*   together    */
 #clock{
-    width: 13rem;
-    height: 5rem;
+    width: 5rem;
+    height: 2rem;
     border: 2px solid red;
     float: right;
     background-color: black;
     color: silver;
     font-family: 'algerian';
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: center;
    
 }

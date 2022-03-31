@@ -16,3 +16,26 @@ body{
 .fr{
     background-color: rgb(16, 129, 241);
 } */
+
+/* CLOCK */
+/*   together    */
+#clock{
+    width: 13rem;
+    height: 5rem;
+    border: 2px solid red;
+    float: right;
+    background-color: black;
+    color: silver;
+    font-family: 'algerian';
+    font-size: 3rem;
+    text-align: center;
+   
+}
+.sep{
+    clear: both;
+    width: 100%;
+    height: 1rem;
+    background-color: green;
+   
+}
+/*   both      */
