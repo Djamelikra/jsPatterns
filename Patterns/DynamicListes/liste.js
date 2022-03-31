@@ -34,6 +34,24 @@ function displayClock(){
     refresh();
 
 }
+/* todo */
+function runClock() {
+    today   = new Date();
+    hours   = today.getHours();
+    minutes = today.getMinutes();
+    seconds = today.getSeconds();
+    timeValue = hours;
+    // Les deux prochaines conditions ne servent que pour l'affichage.
+    // Si le nombre de minute est inférieur à 10, alors on rajoute un 0 devant...
+    timeValue += ((minutes < 10) ? ":0" : ":") + minutes;
+    timeValue += ((seconds < 10) ? ":0" : ":") + seconds;
+    document.getElementById("time").value = timeValue;
+    timerID = setTimeout("runClock()",1000);
+    timerRunning = true;
+  }
+
+
+
 
 /*------------------------------------Fr date----------------------------*/
 let dt = new Date();
@@ -44,6 +62,8 @@ strDate = dt.toLocaleDateString('fr-FR', opt);
 document.querySelector('p.dateFrlong').innerHTML = strDate;
 document.querySelector('p.slice').innerHTML =  ('0'+dt.getDate()).slice(-2)+"/"+('0'+(dt.getMonth()+1)).slice(-2)+"/"+dt.getFullYear();
 
-
-
+/*********************************LIST******************************************************* */
+function test(){
+    alert('test !');
+}
 

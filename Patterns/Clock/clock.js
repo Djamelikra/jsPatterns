@@ -62,7 +62,23 @@ strDate = dt2.toLocaleDateString('fr-FR', opt);
 document.querySelector('.dateFrlong').innerHTML = strDate;
 document.querySelector('.fr h3.slice').innerHTML =  ('0'+dt2.getDate()).slice(-2)+"/"+('0'+(dt2.getMonth()+1)).slice(-2)+"/"+dt2.getFullYear();
 
+/**************************************TODO **************************************/
 
+function runClock() {
+    today   = new Date();
+    hours   = today.getHours();
+    minutes = today.getMinutes();
+    seconds = today.getSeconds();
+    timeValue = hours;
+    // Les deux prochaines conditions ne servent que pour l'affichage.
+    // Si le nombre de minute est inférieur à 10, alors on rajoute un 0 devant...
+    timeValue += ((minutes < 10) ? ":0" : ":") + minutes;
+    timeValue += ((seconds < 10) ? ":0" : ":") + seconds;
+    document.getElementById("time").value = timeValue;
+    timerID = setTimeout("runClock()",1000);
+    timerRunning = true;
+  }
+  /**************************************\/TODO ***************************************/
 
 
 
