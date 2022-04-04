@@ -1,4 +1,18 @@
-0. New York - 1. Los Angeles - 2. Chicago - 3. Minneapolis - 4. Denver - 5. Dallas - 6. Seattle - 7. Boston - 8. San Francisco - 9. St. Louis - 10. Houston - 11. Phoenix - 12. Salt Lake City
+Distances
+
+0. New York - 
+1. Los Angeles - 
+2. Chicago - 
+3. Minneapolis - 
+4. Denver - 
+5. Dallas - 
+6. Seattle - 
+7. Boston - 
+8. San Francisco - 
+9. St. Louis - 
+10. Houston - 
+11. Phoenix - 
+12. Salt Lake City
 --------------------------------------------------------------------------------------------------------------
 static class DataModel {
   public final long[][] distanceMatrix = {
