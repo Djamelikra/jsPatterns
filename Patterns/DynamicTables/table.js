@@ -1,9 +1,6 @@
 
 /*------------------------------------Window----------------------------*/
-// window.onload = function{
-//     var elt = document.getElementById('doTable');
-//     elt.onclick = createTable();
-// }
+
 
 
 /*------------------------------------Clock----------------------------*/
@@ -188,12 +185,12 @@ function crerTable(tabContent) {
 }
 
 // Tableau qui contient la donnÃ©es
-var tabContent =[
-    ['', "City", "New York", "Los Angeles", "Chicago", 'Minneapolis', 'Denver', 'Dallas', 'Seattle','Boston','San Francisco','St. Louis','Houston','Phoenix','Salt Lake City'],
-    [1, "New York", 0,2451,713,1018,1631,1374,2408,213,2571,875,1420,2145,1972],
-    [2, "Los Angeles", 2451,0,1745,1524,831,1240,959,2596,403,1589,1374,357,579],
-    [3, "Chicago",713,1745,0,355,920,803,1737,851,1858,262,940,1453,1260 ],
-    [4, "Minneapolis", 1018,1524,355,0,700,862,1395,1123,1584,466,1056,1280,987],
+var tabContent = [
+    ['', "City", "New York", "Los Angeles", "Chicago", 'Minneapolis', 'Denver', 'Dallas', 'Seattle', 'Boston', 'San Francisco', 'St. Louis', 'Houston', 'Phoenix', 'Salt Lake City'],
+    [1, "New York", 0, 2451, 713, 1018, 1631, 1374, 2408, 213, 2571, 875, 1420, 2145, 1972],
+    [2, "Los Angeles", 2451, 0, 1745, 1524, 831, 1240, 959, 2596, 403, 1589, 1374, 357, 579],
+    [3, "Chicago", 713, 1745, 0, 355, 920, 803, 1737, 851, 1858, 262, 940, 1453, 1260],
+    [4, "Minneapolis", 1018, 1524, 355, 0, 700, 862, 1395, 1123, 1584, 466, 1056, 1280, 987],
     [5, "Denver",],
     [6, "Dallas",],
     [7, "Seattle",],
@@ -204,10 +201,51 @@ var tabContent =[
     [12, "Phoenix",],
     [13, "Salt Lake City",],
 
-    ];
+];
 
 document.body.insertBefore(crerTable(tabContent), document.body.lastChild);
 let hr3 = document.createElement('hr');
 document.body.appendChild(hr3);
 /////////////////////////////////////////////////////////////////////////////////////
 
+function generateTable() {
+    var body = document.getElementsByTagName('body')[0];
+
+    let table = document.createElement('table');
+    let tbody = document.createElement('tbody');
+
+    // Now, creating all cells
+    //Nested loops
+    //First loop for the rows (i)
+    for (let i = 0; i < 2; i++) {
+        //create table row
+        let row = document.createElement('tr');
+         //Second loop for the columns (j)
+        for (let j = 0; j < 2; j++) {
+            //1-Create a <td> element
+            let td = document.createElement('td');
+            // and create a text node, make the text node the contents of the <td>
+            let tdText = document.createTextNode('cell in row : ' + i + ' , column : ' +j);
+            //and put the <td> with his content, at the end of the table row
+            td.appendChild(tdText);
+            row.appendChild(td);
+        }
+          // add the row to the end of the table body
+          tbody.appendChild(row);
+    }
+      // put the <tbody> in the <table>
+      table.appendChild(tbody);
+       // appends <table> into <body>
+       body.appendChild(table);
+       // sets the border attribute of tbl to 2;
+       table.setAttribute('border','2');
+}
+
+/////////////////////////////////////////
+    //     var elt = document.getElementById('doTable');
+    //     elt.onclick = generateTable();
+// document.getElementById('doTable').addEventListener('click',function());
+// window.onload = function(){
+//     var elt = document.getElementById('doTable');
+//     elt.onclick = generateTable();
+// }
