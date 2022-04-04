@@ -1,0 +1,2 @@
+1;table;https://www.delftstack.com/fr/howto/javascript/create-table-javascript/
+2;
