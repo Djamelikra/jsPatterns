@@ -1,15 +1,7 @@
-
-
-/*------------------------------------Open Wikipedia----------------------------*/
-//Event handled by discret js
-// const para = document.getElementById("wiki");
-// exWiki.addEventListener('click',function(){ window.alert('Clic sur le paragraphe') });
-// elem.addEventListener("click", function(){ window.open('https://en.wikipedia.org/wiki', '_blank')});
 /*------------------------------------Window----------------------------*/
 //Event handled by discret js
 const elem = document.getElementById("doTable");
 elem.addEventListener("click", generateTable, false);
-
 
 /*------------------------------------Clock----------------------------*/
 window.onload = displayClock();
@@ -294,17 +286,16 @@ function dataArray() {
   let inputRow = prompt("Number of rows ?", 5);
   if (isNaN(inputRow)) {
     alert("A number is required !");
-      return 0;
+    return 0;
   }
   let inputCol = prompt("Number of columns ?", 5);
   if (isNaN(inputCol)) {
     alert("A number is required !");
     return 0;
-}
+  }
   //convert the string to number
-  return[Number(inputRow), Number(inputCol)];
+  return [Number(inputRow), Number(inputCol)];
 }
-
 
 function generateTable() {
   var body = document.getElementsByTagName("body")[0];
@@ -330,6 +321,7 @@ function generateTable() {
       let tdText = document.createTextNode(
         "cell in row : " + i + " , column : " + j
       );
+      td.style.border = "solid 3px green";
       //and put the <td> with his content, at the end of the table row
       td.appendChild(tdText);
       row.appendChild(td);
@@ -344,6 +336,8 @@ function generateTable() {
   // sets the border attribute of tbl to 2;
   table.setAttribute("border", "2");
 
+  table.style.border = "solid 5px red";
+
   let hr4 = document.createElement("hr");
   document.body.appendChild(hr4);
   let br4 = document.createElement("br");
@@ -351,7 +345,6 @@ function generateTable() {
 
   return;
 }
-
-
+///////////////////////////////END//////////////////////////////////
 
 
