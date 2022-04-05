@@ -345,6 +345,15 @@ function generateTable() {
 
   return;
 }
-///////////////////////////////END//////////////////////////////////
+///////////////////////////////LOCATION//////////////////////////////////
+const loc = document.getElementById("loc");
+loc.addEventListener("click", locat, false);
 
+function locat() {
+  alert(location.href + " " + location.hostname);
+  
+  document.querySelector('.display').innerHTML = location.hostname + " / " +  location.protocol + "/ " + location.search;
+
+  
+}
 
