@@ -1,7 +1,16 @@
+
+
+/*------------------------------------Open Wikipedia----------------------------*/
+//Event handled by discret js
+// const para = document.getElementById("wiki");
+// exWiki.addEventListener('click',function(){ window.alert('Clic sur le paragraphe') });
+// elem.addEventListener("click", function(){ window.open('https://en.wikipedia.org/wiki', '_blank')});
 /*------------------------------------Window----------------------------*/
 //Event handled by discret js
 const elem = document.getElementById("doTable");
 elem.addEventListener("click", generateTable, false);
+
+
 /*------------------------------------Clock----------------------------*/
 window.onload = displayClock();
 
@@ -280,29 +289,33 @@ document.body.appendChild(hr3);
 
 //////////////////////////////////GENERATE TABLE///////////////////////////////////////////////////
 
-//------------Check inputs------------------------
-function retrieveInput() {
-
-        let inputRow = prompt("Number of rows ?", 5);
-        let inputCol = prompt("Number of columns ?", 5);
-        //convert the string to number
-        return [~~inputRow, ~~inputCol];
-
+//------------inputs------------------------
+function dataArray() {
+  let inputRow = prompt("Number of rows ?", 5);
+  if (isNaN(inputRow)) {
+    alert("A number is required !");
+      return 0;
+  }
+  let inputCol = prompt("Number of columns ?", 5);
+  if (isNaN(inputCol)) {
+    alert("A number is required !");
+    return 0;
+}
+  //convert the string to number
+  return[Number(inputRow), Number(inputCol)];
 }
 
-function generateTable() {
- 
-   
 
+function generateTable() {
   var body = document.getElementsByTagName("body")[0];
 
   let table = document.createElement("table");
   let tbody = document.createElement("tbody"); ///
-  
+
   // Now, creating all cells
   //Nested loops
   //First loop for the rows (i)
-  let retData = retrieveInput();
+  let retData = dataArray();
   let inputRow = retData[0];
   let inputCol = retData[1];
 
@@ -337,14 +350,8 @@ function generateTable() {
   document.body.appendChild(br4);
 
   return;
-
 }
 
-/////////////////////////////////////////
-//     var elt = document.getElementById('doTable');
-//     elt.onclick = generateTable();
-// document.getElementById('doTable').addEventListener('click',function());
-// window.onload = function(){
-//     var elt = document.getElementById('doTable');
-//     elt.onclick = generateTable();
-// }
+
+
+
