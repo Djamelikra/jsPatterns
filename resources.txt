@@ -1,3 +1,6 @@
 1;table;https://www.delftstack.com/fr/howto/javascript/create-table-javascript/
 2;table;https://developer.mozilla.org/fr/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
-3;
+3;table;https://waytolearnx.com/2019/07/comment-ajouter-ou-supprimer-des-lignes-dans-un-tableau-en-jquery.html
+4;table;https://www.leppf.com/site/spip.php?article133
+5;table;https://www.devfaq.fr/question/comment-cr-eacute-er-et-remplir-une-table-html-agrave-laide-de-javascript
+6;TableAjax;https://thom4.net/2007/tableau-auto-extensible-en-javascript/
