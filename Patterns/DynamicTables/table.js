@@ -1,7 +1,7 @@
 /*------------------------------------Window----------------------------*/
 //Event handled by discret js
-const elem  = document.getElementById("doTable");
-elem.addEventListener('click',generateTable,false);
+const elem = document.getElementById("doTable");
+elem.addEventListener("click", generateTable, false);
 /*------------------------------------Clock----------------------------*/
 window.onload = displayClock();
 
@@ -280,22 +280,32 @@ document.body.appendChild(hr3);
 
 //////////////////////////////////GENERATE TABLE///////////////////////////////////////////////////
 
+//------------Check inputs------------------------
+function retrieveInput() {
+
+        let inputRow = prompt("Number of rows ?", 5);
+        let inputCol = prompt("Number of columns ?", 5);
+        //convert the string to number
+        return [~~inputRow, ~~inputCol];
+
+}
+
 function generateTable() {
-
-let inputRow = prompt('Number of rows ?',5);
-let inputCol = prompt('Number of columns ?',5);
-
-
-
+ 
+   
 
   var body = document.getElementsByTagName("body")[0];
 
   let table = document.createElement("table");
-  let tbody = document.createElement("tbody");
-
+  let tbody = document.createElement("tbody"); ///
+  
   // Now, creating all cells
   //Nested loops
   //First loop for the rows (i)
+  let retData = retrieveInput();
+  let inputRow = retData[0];
+  let inputCol = retData[1];
+
   for (let i = 0; i < inputRow; i++) {
     //create table row
     let row = document.createElement("tr");
@@ -321,10 +331,13 @@ let inputCol = prompt('Number of columns ?',5);
   // sets the border attribute of tbl to 2;
   table.setAttribute("border", "2");
 
-    let hr4 = document.createElement("hr");
-    document.body.appendChild(hr4);
-    let br4 = document.createElement("br");
-    document.body.appendChild(br4);
+  let hr4 = document.createElement("hr");
+  document.body.appendChild(hr4);
+  let br4 = document.createElement("br");
+  document.body.appendChild(br4);
+
+  return;
+
 }
 
 /////////////////////////////////////////
@@ -335,5 +348,3 @@ let inputCol = prompt('Number of columns ?',5);
 //     var elt = document.getElementById('doTable');
 //     elt.onclick = generateTable();
 // }
-
-
