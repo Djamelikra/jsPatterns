@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Table</title>
+    <link rel="stylesheet" href="dynTable.css">
+    <script src="dynTable.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="head">
+            <p class="dateFrlong">...</p>
+            <div id="clock">
+                <!-- Dispaly the clock -->
+            </div>
+            <div class="sep">
+                <!--Mandatory for the clearfix -->
+            </div>
+            <hr>
+        </div>
+    </header>
+    <div class="main">
+        <section id="dynTbl">
+            <table class="table-facture">
+                <caption>Année en cours</caption>
+                <thead>
+                  <tr>
+                    <th>Activité</th>
+                    <th>Cotisation</th>
+                    <th>Inscrit</th>
+                    <th>Prix</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <th class="lib-total" colspan="3">Total</th>
+                    <th class="fld-num">0€</th>
+                  </tr>
+                </tfoot>
+              </table>
+       
+        </section>
+
+
+
+
+
+
+
+
+    </div>
+    <footer>
+        <div class="display">
+
+        </div>
+        <button id="loc" title="Location">Location</button>
+    </footer>
+
+</body>
+
+</html>
