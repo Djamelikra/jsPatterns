@@ -4,3 +4,5 @@
 4;table;https://www.leppf.com/site/spip.php?article133
 5;table;https://www.devfaq.fr/question/comment-cr-eacute-er-et-remplir-une-table-html-agrave-laide-de-javascript
 6;TableAjax;https://thom4.net/2007/tableau-auto-extensible-en-javascript/
+7;EventJS;https://www.delftstack.com/fr/howto/javascript/javascript-onclick-functions/
+
