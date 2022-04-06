@@ -39,15 +39,19 @@ body{
 }
 /*   both      */
 /******************************TABLE********************************************/
-table{
-    border-collapse: collapse;
-    border-spacing: 0;
-    text-align: center;
+/*******************************************************************************/
+
+table > caption {
+    font-size: 20px;
+    padding: 5px;
+  }
+
+#invoiceTable th,
+#invoiceTable td {
+  border: 1px solid gray;
+  padding: 5px;
 }
-th, td{
-    padding: 3px 3px;
-    border: 1px solid #000;
-}
-th{
-    font-weight: bolder;
+
+#invoiceTable thead {
+    background-color: aqua;
 }

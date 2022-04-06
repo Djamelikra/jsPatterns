@@ -58,29 +58,39 @@ document.querySelector("p.dateFrlong").innerHTML = strDate;
 
 //Array classes
 let classes = [
-  { title: "Patchwork",  price: 25 },//0
-  { title: "Peinture",  price: 35 }, // 1
-  { title: "Encadrement",  price: 22 }, // 2
-  { title: "Gymnastique",   price: 17 }, // 3
-  { title: "Photographie",  price: 45 }, // 4
-  { title: "Emaux",  price: 30 }, // 5
-  { title: "Création textile",  price: 30 }, // 6
-  { title: "Roller",  price: 58 }, // 7
-  { title: "Généalogie",  price: 15 }, // 8
-  { title: "Scrapbooking",  price: 20 }, // 9
+  { title: "JavaScript", price: 25 },//0
+  { title: "HTML", price: 35 }, // 1
+  { title: "CSS", price: 22 }, // 2
+  { title: "jQuery", price: 17 }, // 3
+  { title: "Ajax", price: 45 }, // 4
+  { title: "Java", price: 30 }, // 5
+  { title: "SQL", price: 30 }, // 6
+  { title: "UML", price: 58 }, // 7
+  { title: "Git", price: 15 }, // 8
+  { title: "Bootstrap", price: 20 }, // 9
   { title: "Membership fees", price: 35 }  // 10
-
-
 ];
-
-
-
 
 function initTable() {
   let tbody = document.querySelector('#invoiceTable').querySelector('tbody');
+  for (let i = 0; i < classes.length; i++) {
+    let line = tbody.insertRow();
 
-  
-}
+    // cells classes
+    let cellClass = line.insertCell();
+    cellClass.innerHTML = classes[i].title;
+    // cells contribution
+    let cellCont = line.insertCell();
+    cellCont.innerHTML = classes[i].price;
+    // cells register
+    let cellReg = line.insertCell();
+    // cells price
+    let cellPrice = line.insertCell();
+    cellPrice.innerHTML = 0 ; 
+  }
+
+};
+
 initTable();
 
 
@@ -106,9 +116,9 @@ loc.addEventListener("click", locat, false);
 
 function locat() {
   alert(location.href + " " + location.hostname);
-  
-  document.querySelector('.display').innerHTML = location.hostname + " / " +  location.protocol + "/ " + location.search;
 
-  
+  document.querySelector('.display').innerHTML = location.hostname + " / " + location.protocol + "/ " + location.search;
+
+
 }
 
