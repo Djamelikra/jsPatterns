@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dynamic Table</title>
+    
     <link rel="stylesheet" href="dynTable.css">
     <script src="dynTable.js" defer></script>
 </head>
@@ -25,14 +26,14 @@
     </header>
     <div class="main">
         <section id="dynTbl">
-            <table class="table-facture">
-                <caption>Année en cours</caption>
+            <table class="invoiceTable">
+                <caption>Current year</caption>
                 <thead>
                   <tr>
-                    <th>Activité</th>
-                    <th>Cotisation</th>
-                    <th>Inscrit</th>
-                    <th>Prix</th>
+                    <th>Class</th>
+                    <th>Contribution</th>
+                    <th>Registered</th>
+                    <th>Price</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -41,7 +42,7 @@
                 <tfoot>
                   <tr>
                     <th class="lib-total" colspan="3">Total</th>
-                    <th class="fld-num">0€</th>
+                    <th class="fld-num">0 <img src="/Assets/pictures/bitcoin.svg" alt="B" title="bitcoin"> </th>
                   </tr>
                 </tfoot>
               </table>

@@ -53,9 +53,53 @@ opt = { weekday: "long", year: "numeric", month: "long", day: "2-digit" };
 strDate = dt.toLocaleDateString("fr-FR", opt);
 // document.querySelector('p.slice').innerHTML = ('0'+dt.getDate()).slice(-2)+"/"+('0'+(dt.getMonth()+1)).slice(-2)+"/"+dt.getFullYear();
 document.querySelector("p.dateFrlong").innerHTML = strDate;
-
+/******************************************************************************************* */
 /*********************************TABLE******************************************************* */
 
+//Array classes
+let classes = [
+  { title: "Patchwork",  price: 25 },//0
+  { title: "Peinture",  price: 35 }, // 1
+  { title: "Encadrement",  price: 22 }, // 2
+  { title: "Gymnastique",   price: 17 }, // 3
+  { title: "Photographie",  price: 45 }, // 4
+  { title: "Emaux",  price: 30 }, // 5
+  { title: "Création textile",  price: 30 }, // 6
+  { title: "Roller",  price: 58 }, // 7
+  { title: "Généalogie",  price: 15 }, // 8
+  { title: "Scrapbooking",  price: 20 }, // 9
+  { title: "Membership fees", price: 35 }  // 10
+
+
+];
+
+
+
+
+function initTable() {
+  let tbody = document.querySelector('#invoiceTable').querySelector('tbody');
+
+  
+}
+initTable();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********************************************************************************************** */
 ///////////////////////////////LOCATION//////////////////////////////////
 const loc = document.getElementById("loc");
 loc.addEventListener("click", locat, false);
