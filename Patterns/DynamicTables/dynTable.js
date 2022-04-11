@@ -84,6 +84,12 @@ function initTable() {
     cellCont.innerHTML = classes[i].price;
     // cells register
     let cellReg = line.insertCell();
+    // insert checkboxes
+    if (i === classes.length -1) {
+      cellReg.innerHTML = '<input type="checkbox" disabled checked />';
+    }else{
+      cellReg.innerHTML = '<input type="checkbox"/>';
+    }
     // cells price
     let cellPrice = line.insertCell();
     cellPrice.innerHTML = 0 ; 
