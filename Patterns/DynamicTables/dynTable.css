@@ -58,6 +58,10 @@ table>caption {
     background-color: aqua;
 }
 
+#total{
+    font-size: 1.5rem;
+    color: red;
+}
 /*Classes added by JS*******************/
 
 .fldClass,

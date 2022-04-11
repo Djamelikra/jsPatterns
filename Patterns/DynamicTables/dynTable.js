@@ -115,8 +115,11 @@ function contribCalcul() {
 
   for (let i = 0; i < classes.length; i++) {
     if (tabRow[i].cells[2].childNodes[0].checked) {
+      //style adaptation
+      tabRow[i].cells[0].style.fontWeight = 'bold';
       tabRow[i].cells[3].style.color = 'red';
       tabRow[i].cells[3].innerHTML = euro.format(classes[i].price);
+      ///style adaptation
       total += classes[i].price;
     }else{
       tabRow[i].cells[3].innerHTML = euro.format(0);
