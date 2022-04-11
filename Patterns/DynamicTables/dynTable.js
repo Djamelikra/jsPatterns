@@ -2,6 +2,8 @@
 
 
 /*------------------------------------Clock----------------------------*/
+"use strict";
+
 window.onload = displayClock();
 
 function refresh() {
@@ -49,7 +51,7 @@ function runClock() {
 let dt = new Date();
 let strDate = dt.toLocaleDateString("fr-Fr");
 // document.querySelector('.dateFr').innerHTML = strDate;
-opt = { weekday: "long", year: "numeric", month: "long", day: "2-digit" };
+let opt = { weekday: "long", year: "numeric", month: "long", day: "2-digit" };
 strDate = dt.toLocaleDateString("fr-FR", opt);
 // document.querySelector('p.slice').innerHTML = ('0'+dt.getDate()).slice(-2)+"/"+('0'+(dt.getMonth()+1)).slice(-2)+"/"+dt.getFullYear();
 document.querySelector("p.dateFrlong").innerHTML = strDate;
@@ -71,7 +73,10 @@ let classes = [
   { title: "Membership fees", price: 35 }  // 10
 ];
 
+const euro = new Intl.NumberFormat( 'fr-FR', { style: 'currency', currency: 'EUR' } );
+
 function initTable() {
+  
   let tbody = document.querySelector('#invoiceTable').querySelector('tbody');
   for (let i = 0; i < classes.length; i++) {
     let line = tbody.insertRow();
@@ -79,11 +84,14 @@ function initTable() {
     // cells classes
     let cellClass = line.insertCell();
     cellClass.innerHTML = classes[i].title;
+    cellClass.className='fldClass';
     // cells contribution
     let cellCont = line.insertCell();
-    cellCont.innerHTML = classes[i].price;
+    cellCont.innerHTML = euro.format(classes[i].price) ;
+    cellCont.className='fldCont';
     // cells register
     let cellReg = line.insertCell();
+    cellReg.className='fldReg';
     // insert checkboxes
     if (i === classes.length -1) {
       cellReg.innerHTML = '<input type="checkbox" disabled checked />';
@@ -92,13 +100,36 @@ function initTable() {
     }
     // cells price
     let cellPrice = line.insertCell();
-    cellPrice.innerHTML = 0 ; 
+    cellPrice.className='fldPrice';
+    cellPrice.innerHTML = euro.format(0) ; 
   }
 
 };
 
-initTable();
+//to launch automaticly the function
 
+
+function contribCalcul() {
+  let tabRow = document.querySelector('#invoiceTable').querySelector('tbody').querySelectorAll('tr');
+  let total = 0;
+
+  for (let i = 0; i < classes.length; i++) {
+    if (tabRow[i].cells[2].childNodes[0].checked) {
+      tabRow[i].cells[3].style.color = 'red';
+      tabRow[i].cells[3].innerHTML = euro.format(classes[i].price);
+      total += classes[i].price;
+    }else{
+      tabRow[i].cells[3].innerHTML = euro.format(0);
+    } 
+
+    document.querySelector('#total').innerHTML = euro.format(total)  ;
+  }
+  
+}
+
+
+initTable();
+contribCalcul();
 
 
 

@@ -25,6 +25,7 @@
     </header>
     <div class="main">
         <section id="dynTbl">
+          <form oninput="contribCalcul();" id="frmInvoice">
             <table id="invoiceTable">
                 <caption>Current year</caption>
                 <thead>
@@ -41,10 +42,11 @@
                 <tfoot>
                   <tr>
                     <th class="lib-total" colspan="3">Total </th>
-                    <th class="fld-num">0 <img src="/Assets/pictures/bitcoin.svg" alt="B" title="bitcoin"> </th>
+                    <th class="fld-num" id="total">0 <img src="/Assets/pictures/bitcoin.svg" alt="B" title="bitcoin"> </th>
                   </tr>
                 </tfoot>
               </table>
+            </form>
        
         </section>
 
