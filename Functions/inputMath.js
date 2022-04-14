@@ -21,6 +21,7 @@
       return num;
     }
 
+    //Version, using template strings (ES6(2015))
     input.addEventListener('change', () => {
       const num = parseFloat(input.value);
       if (isNaN(num)) {
@@ -31,3 +32,15 @@
         para.textContent += `${num} factorial is ${factorial(num)}. `;
       }
     });
+
+    //Classical syntaxe
+    // input.onchange = function() {
+    //   var num = input.value;
+    //   if (isNaN(num)) {
+    //     para.textContent = 'You need to enter a number!';
+    //   } else {
+    //     para.textContent = num + ' squared is ' + squared(num) + '. ' +
+    //                        num + ' cubed is ' + cubed(num) + '. ' +
+    //                        num + ' factorial is ' + factorial(num) + '.';
+    //   }
+    // }
