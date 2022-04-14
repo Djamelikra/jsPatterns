@@ -32,7 +32,6 @@ function displayClock() {
   document.getElementById("clock").innerHTML = theTime;
   refresh();
 }
-/* todo */
 function runClock() {
   today = new Date();
   hours = today.getHours();

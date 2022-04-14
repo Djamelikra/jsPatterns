@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stand Alone Clock</title>
+    <style>
+        body {
+            width: 80%;
+            margin: auto;
+            background: rgb(246, 250, 138);
+        }
+
+        .dateFrlong {
+            /* display: inline-block; */
+            position: fixed;
+            left: 10rem;
+            /* top: 1rem; */
+            margin-top: .5rem;
+            font-family: cursive;
+            font-size: 1.5rem;
+        }
+
+        /*   together    */
+        #clock {
+            width: 9rem;
+            height: 2rem;
+            border: 2px solid white;
+            float: right;
+            background-color: black;
+            color: white;
+            font-family: 'algerian';
+            font-size: 2rem;
+            text-align: center;
+            padding-bottom: .5rem;
+
+        }
+
+        .sep {
+            clear: both;
+            width: 100%;
+            height: 1rem;
+            background-color: green;
+
+        }
+
+        /*   both      */
+    </style>
+</head>
+
+<body>
+    <!-- <h1>Stand Alone Clock</h1> -->
+    <header>
+        <div class="head">
+            <p class="dateFrlong">...</p>
+            <div id="clock">
+                <!-- Dispaly the clock -->
+            </div>
+            <div class="sep">
+                <!--Mandatory for the clearfix -->
+            </div>
+            <hr>
+        </div>
+    </header>
+    <script>
+        window.onload = displayClock();
+
+        function refresh() {
+            /*refresh in order to synhronize seconds */
+            let step = 1000;
+            setTimeout("displayClock()", step);
+        }
+
+        function displayClock() {
+            let dt = new Date();
+            let hour = dt.getHours();
+            let min = dt.getMinutes();
+            let sec = dt.getSeconds();
+
+            if (hour < 10) {
+                hour = "0" + hour;
+            }
+            if (min < 10) {
+                min = "0" + min;
+            }
+            if (sec < 10) {
+                sec = "0" + sec;
+            }
+
+            let theTime = hour + ":" + min + ":" + sec;
+            document.getElementById("clock").innerHTML = theTime;
+            refresh();
+        }
+        function runClock() {
+            today = new Date();
+            hours = today.getHours();
+            minutes = today.getMinutes();
+            seconds = today.getSeconds();
+            timeValue = hours;
+            // Les deux prochaines conditions ne servent que pour l'affichage.
+            // Si le nombre de minute est inférieur à 10, alors on rajoute un 0 devant...
+            timeValue += (minutes < 10 ? ":0" : ":") + minutes;
+            timeValue += (seconds < 10 ? ":0" : ":") + seconds;
+            document.getElementById("time").value = timeValue;
+            timerID = setTimeout("runClock()", 1000);
+            timerRunning = true;
+        }
+        /*------------------------------------Fr date----------------------------*/
+        let dt = new Date();
+        let strDate = dt.toLocaleDateString("fr-Fr");
+        // document.querySelector('.dateFr').innerHTML = strDate;
+        let opt = { weekday: "long", year: "numeric", month: "long", day: "2-digit" };
+        strDate = dt.toLocaleDateString("fr-FR", opt);
+        // document.querySelector('p.slice').innerHTML = ('0'+dt.getDate()).slice(-2)+"/"+('0'+(dt.getMonth()+1)).slice(-2)+"/"+dt.getFullYear();
+        document.querySelector("p.dateFrlong").innerHTML = strDate;
+/******************************************************************************************* */
+    </script>
+
+
+</body>
+
+</html>
