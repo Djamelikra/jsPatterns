@@ -153,7 +153,7 @@ let hr2 = document.createElement("hr");
 document.body.appendChild(hr2);
 // document.body.appendChild(hr1);
 
-function crerTable(tabContent) {
+function doTable(tabContent) {
   var nbL = tabContent.length;
   var nbC = tabContent[0].length;
   console.log("nbL => " + nbL);
@@ -275,7 +275,7 @@ var tabContent = [
   [13, "Salt Lake City"],
 ];
 
-document.body.insertBefore(crerTable(tabContent), document.body.lastChild);
+document.body.insertBefore(doTable(tabContent), document.body.lastChild);
 let hr3 = document.createElement("hr");
 document.body.appendChild(hr3);
 
