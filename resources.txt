@@ -8,6 +8,14 @@
 8;Function;https://developer.mozilla.org/fr/docs/Learn/JavaScript/Building_blocks/Build_your_own_function
 9;function;https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-stage-4.html
 10;functionInput;https://developer.mozilla.org/fr/docs/Learn/JavaScript/Building_blocks/Return_values
+11;table;https://stackoverflow.com/questions/8302166/dynamic-creation-of-table-with-dom
+12;table;https://codehasbug.com/javascript/how-to-create-a-dynamic-table-in-html-using-javascript/
+13;table;https://www.aspsnippets.com/Articles/Create-dynamic-Table-in-HTML-at-runtime-using-JavaScript.aspx
+14;table;https://www.itgeared.com/how-to-create-dynamic-html-table-javascript/
+15;tableJquery;https://waytolearnx.com/2019/07/comment-ajouter-ou-supprimer-des-lignes-dans-un-tableau-en-jquery.html
+
+
+
 
 
 
