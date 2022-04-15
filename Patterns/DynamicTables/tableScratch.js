@@ -23,3 +23,7 @@ function genTable() {
   }
   tblZone.appendChild(myTable);
 }
+//
+let cta = document.getElementsByTagName('button')[0];
+cta.addEventListener('click',genTable);
+
