@@ -101,3 +101,26 @@ let ctaV2 = document.getElementsByName("btnV2")[0];
 ctaV2.addEventListener("click", genTableV2);
 
 /************************V3************************** */
+function addToDom(newElement, newId, newContent) {
+var thisElement = document.createElement(newElement);
+thisElement.setAttribute('id',newId);
+var eltContent = document.createTextNode(newContent);
+thisElement.appendChild(eltContent);
+
+// var location = document.getElementsByTagName(marker)[0];
+document.body.appendChild(thisElement);
+
+//add CSS
+thisElement.style.border = "outset 5px green";
+// thisElement.style.borderColor = "green";
+
+  
+}
+
+function genTableV3(){
+  addToDom('div','testDiv','texte de remplissage de la div');
+}
+
+
+let ctaV3 = document.getElementsByName("btnV3")[0];
+ctaV3.addEventListener("click", genTableV3);
