@@ -47,7 +47,7 @@ function genTableV1() {
 
     for (let j = 0; j < jCol; j++) {
       var tdCell = document.createElement("td");
-      var cellText = document.createTextNode("i-" + i + " ,j: " + j);
+      var cellText = document.createTextNode("i:" + i + " , j: " + j);
       tdCell.appendChild(cellText);
       tblRow.appendChild(tdCell);
     }
@@ -60,6 +60,7 @@ function genTableV1() {
   // add a few CSS
   myTable.setAttribute('border', '2');
   myTable.style.borderCollapse='collapse';
+  myTable.style.background = "orange";
 }
 
   let ctaV1 = document.getElementsByName('btnV1')[0];
