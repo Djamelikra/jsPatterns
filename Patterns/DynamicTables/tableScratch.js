@@ -148,3 +148,30 @@ function genTableV4() {
 
 let ctaV4 = document.getElementsByName("btnV4")[0];
 ctaV4.addEventListener("click", genTableV4);
+
+/************************V5************************** */
+function genTableVx() {
+  let contain = document.createElement('div');
+  contain.setAttribute('id', 'contain');
+  document.body.appendChild(contain);
+
+  
+  
+  
+  contain.style.width = '10rem';
+  contain.style.height = '10rem';
+  contain.style.border = "outset 5px green";
+
+
+
+ 
+}
+function genTableV5() {
+  genTableVx();
+  // document
+  //   .getElementById("tbl")
+  //   .appendChild(populateTable(null, 5, 3, "div padding text"));
+}
+
+let ctaV5 = document.getElementsByName("btnV5")[0];
+ctaV5.addEventListener("click", genTableV5);

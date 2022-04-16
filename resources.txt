@@ -13,6 +13,8 @@
 13;table;https://www.aspsnippets.com/Articles/Create-dynamic-Table-in-HTML-at-runtime-using-JavaScript.aspx
 14;table;https://www.itgeared.com/how-to-create-dynamic-html-table-javascript/
 15;tableJquery;https://waytolearnx.com/2019/07/comment-ajouter-ou-supprimer-des-lignes-dans-un-tableau-en-jquery.html
+16;DynamicScriptJS;https://www.javascripttutorial.net/javascript-dom/javascript-createelement/
+
 
 
 
