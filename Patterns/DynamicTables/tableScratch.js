@@ -75,11 +75,11 @@ function genTableV2() {
   //table location
   let tblZone = document.getElementById("tbl");
 
-    //init table
-    let myTable = document.createElement("table");
+  //init table
+  let myTable = document.createElement("table");
 
   for (var i = 1; i < 5; i++) {
-    var tr = [] ;
+    var tr = [];
     tr[i] = document.createElement("tr");
     var td1 = document.createElement("td");
     var td2 = document.createElement("td");
@@ -102,47 +102,49 @@ ctaV2.addEventListener("click", genTableV2);
 
 /************************V3************************** */
 function addToDom(newElement, newId, newContent) {
-var thisElement = document.createElement(newElement);
-thisElement.setAttribute('id',newId);
-var eltContent = document.createTextNode(newContent);
-thisElement.appendChild(eltContent);
+  var thisElement = document.createElement(newElement);
+  thisElement.setAttribute("id", newId);
+  var eltContent = document.createTextNode(newContent);
+  thisElement.appendChild(eltContent);
 
-var location = document.getElementById('tbl');
-document.body.appendChild(thisElement);
+  var location = document.getElementById("tbl");
+  document.body.appendChild(thisElement);
 
-//add CSS
-thisElement.style.border = "outset 5px green";
-
-  
+  //add CSS
+  thisElement.style.border = "outset 5px green";
 }
 
-function genTableV3(){
-  addToDom('div','testDiv','texte de remplissage de la div');
+function genTableV3() {
+  addToDom("div", "testDiv", "texte de remplissage de la div");
 }
-
 
 let ctaV3 = document.getElementsByName("btnV3")[0];
 ctaV3.addEventListener("click", genTableV3);
 /************************V4************************** */
-function populateTable(newElement, newId, newContent) {
-  var thisElement = document.createElement(newElement);
-  thisElement.setAttribute('id',newId);
-  var eltContent = document.createTextNode(newContent);
-  thisElement.appendChild(eltContent);
-  
-  var location = document.getElementById('tbl');
-  document.body.appendChild(thisElement);
-  
+function populateTable(newTable, nbrRows, nbrCells, newContent) {
+  if (!newTable) {
+    newTable = document.createElement(newTable);
+  }
+  for (let i = 0; i < nbrRows; i++) {
+    let newRow = document.createElement("tr");
+    for (let j = 0; j < nbrCells; j++) {
+      newRow.appendChild(document.createElement("td"));
+      newRow.cells[j].appendChild(
+        document.createTextNode(newContent + (j + 1))
+      );
+    }
+    newTable.appendChild(newRow);
+   
+  }
   //add CSS
-  thisElement.style.border = "outset 5px green";
-  
-    
-  }
-  
-  function genTableV3(){
-    addToDom('div','testDiv','texte de remplissage de la div');
-  }
-  
-  
-  let ctaV3 = document.getElementsByName("btnV3")[0];
-  ctaV3.addEventListener("click", genTableV3);
+ 
+  return newTable;
+}
+function genTableV4() {
+  document
+    .getElementById("tbl")
+    .appendChild(populateTable(null, 5, 3, "div padding text"));
+}
+
+let ctaV4 = document.getElementsByName("btnV4")[0];
+ctaV4.addEventListener("click", genTableV4);
