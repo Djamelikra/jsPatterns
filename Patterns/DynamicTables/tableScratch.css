@@ -1,0 +1,8 @@
+
+
+.cta{
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2rem;
+}
