@@ -107,12 +107,11 @@ thisElement.setAttribute('id',newId);
 var eltContent = document.createTextNode(newContent);
 thisElement.appendChild(eltContent);
 
-// var location = document.getElementsByTagName(marker)[0];
+var location = document.getElementById('tbl');
 document.body.appendChild(thisElement);
 
 //add CSS
 thisElement.style.border = "outset 5px green";
-// thisElement.style.borderColor = "green";
 
   
 }
@@ -124,3 +123,26 @@ function genTableV3(){
 
 let ctaV3 = document.getElementsByName("btnV3")[0];
 ctaV3.addEventListener("click", genTableV3);
+/************************V4************************** */
+function populateTable(newElement, newId, newContent) {
+  var thisElement = document.createElement(newElement);
+  thisElement.setAttribute('id',newId);
+  var eltContent = document.createTextNode(newContent);
+  thisElement.appendChild(eltContent);
+  
+  var location = document.getElementById('tbl');
+  document.body.appendChild(thisElement);
+  
+  //add CSS
+  thisElement.style.border = "outset 5px green";
+  
+    
+  }
+  
+  function genTableV3(){
+    addToDom('div','testDiv','texte de remplissage de la div');
+  }
+  
+  
+  let ctaV3 = document.getElementsByName("btnV3")[0];
+  ctaV3.addEventListener("click", genTableV3);
