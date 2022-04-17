@@ -1,63 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=tableScratch, initial-scale=1.0">
-    <link rel="stylesheet" href="tableScratch.css">
-    <script src="tableScratch.js" defer></script>
-    <title>tableScratch</title>
-</head>
-<body>
-    <h1>Table from Scratch</h1>
-    <header>
-        <a href="javascript:window.location.reload()" title="Refresh the page">Refresh</a>
-
-    </header>
-    <main>
-        <div class="cta">
-        <div>
-            <button name="btnV0" id="btnV0" title="Generate the table v0">Generate table</button>
-        </div>
-        <div>
-            <button name="btnV1" id="btnV1" title="Generate the table v1">Generate table</button>
-        </div>
-        <div>
-            <button name="btnV2" id="btnV2" title="Generate the table v2">Generate table</button>
-        </div>
-        <div>
-            <button name="btnV3" id="btnV3" title="Generate the table v3">Generate table</button>
-        </div>
-        <div>
-            <button name="btnV4" id="btnV4" title="Generate the table v4">Generate table</button>
-        </div>
-        <div>
-            <button name="btnV5" id="btnV5" title="Generate the table v5">Generate table</button>
-        </div>
-    </div>
-     
-        <div id="tbl">
-            <form id="frmUser">
-                <fieldset>
-                <label for="userName">Name:</label>
-                <input type="text" name="userName" id="userName" required=""><br>
-                <label for="email">email:</label>
-                <input type="email" name="email" id="email"><br>
-                <label for="tel">Telephone:</label>
-                <input type="text" name="tel" id="tel"><br>
-                <label for="birthDate">birthDate:</label>
-                <input type="date" name="birthDate" id="birthDate"><br>
-            </fieldset>
-            <button id="btnAddRow" name="btnAddRow" title="addRow">Add a Row</button>
-            </form><br>
-
-        </div>
-        <input type="reset">
-
-    </main>
-    <footer>
-
-    </footer>
-
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=tableScratch, initial-scale=1.0">
+        <link rel="stylesheet" href="tableScratch.css">
+        <script src="tableScratch.js" defer></script>
+        <title>tableScratch</title>
+    </head>
+    <body>
+        <h1>Table from Scratch</h1>
+        <header>
+            <a href="javascript:window.location.reload()" title="Refresh the page">Refresh</a>
+        </header>
+        <main>
+            <div class="cta">
+                <div>
+                    <button name="btnV0" id="btnV0" title="Generate the table v0">Generate table</button>
+                </div>
+                <div>
+                    <button name="btnV1" id="btnV1" title="Generate the table v1">Generate table</button>
+                </div>
+                <div>
+                    <button name="btnV2" id="btnV2" title="Generate the table v2">Generate table</button>
+                </div>
+                <div>
+                    <button name="btnV3" id="btnV3" title="Generate the table v3">Generate table</button>
+                </div>
+                <div>
+                    <button name="btnV4" id="btnV4" title="Generate the table v4">Generate table</button>
+                </div>
+                <div>
+                    <button name="btnV5" id="btnV5" title="Generate the table v5">Generate table</button>
+                </div>
+                <div>
+                    <button name="btnV6" id="btnV6" title="Generate the table v6">Generate table</button>
+                </div>
+            </div>
+            <div id="tbl">
+                <form id="frmUser">
+                    <fieldset>
+                        <label for="userName">Name:</label>
+                        <input
+                            type="text"
+                            name="userName"
+                            id="userName"
+                            required=""
+                        >
+                        <br>
+                        <label for="email">email:</label>
+                        <input type="email" name="email" id="email">
+                        <br>
+                        <label for="tel">Telephone:</label>
+                        <input type="text" name="tel" id="tel">
+                        <br>
+                        <label for="birthDate">birthDate:</label>
+                        <input type="date" name="birthDate" id="birthDate">
+                        <br>
+                    </fieldset>
+                    <button id="btnAddRow" name="btnAddRow" title="addRow">Add a Row</button>
+                </form>
+                <br>
+            </div>
+            <input type="reset">
+            <hr>
+            <div>
+                <input type="button" value="Generate Table" title="Generate Table V6" onclick="genTableV6()">
+                <hr>
+                <div id="dvTable"></div>
+            </div>
+        </main>
+        <footer></footer>
+    </body>
 </html>
