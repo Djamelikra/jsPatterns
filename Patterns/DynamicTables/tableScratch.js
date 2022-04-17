@@ -162,7 +162,7 @@ function genTableV5() {
   //►3 Add Table Header
   let tblHeadRow = newTable.insertRow(0);
   let tblHeadArray = new Array();
-  tblHeadArray = ["userName", "email", "tel", "birthDate","Option"];
+  tblHeadArray = ["userName", "email", "tel", "birthDate", "Option"];
   for (let i = 0; i < tblHeadArray.length; i++) {
     let th = document.createElement("th");
     th.innerHTML = tblHeadArray[i];
@@ -196,23 +196,19 @@ function genTableV5() {
     var btnRemove = document.createElement("button");
     btnRemove.setAttribute("type", "button");
     btnRemove.innerHTML = "Remove";
-    btnRemove.setAttribute('onclick','removeRow(this)');
+    btnRemove.setAttribute("onclick", "removeRow(this)");
     td.appendChild(btnRemove);
 
     userName.value = "";
-    email.value= "";
-    tel.value= "";
+    email.value = "";
+    tel.value = "";
     birthDate.value = "";
-
   });
-
-
 }
 
 function removeRow(r) {
-let theTable = document.getElementById('newTable');
-theTable.deleteRow(r.parentNode.parentNode.rowIndex);
-  
+  let theTable = document.getElementById("newTable");
+  theTable.deleteRow(r.parentNode.parentNode.rowIndex);
 }
 
 let ctaV5 = document.getElementsByName("btnV5")[0];
@@ -238,18 +234,18 @@ function genTableV6() {
   //Add the header row.
   var row = table.insertRow(-1);
   for (var i = 0; i < columnCount; i++) {
-      var headerCell = document.createElement("TH");
-      headerCell.innerHTML = customers[0][i];
-      row.appendChild(headerCell);
+    var headerCell = document.createElement("TH");
+    headerCell.innerHTML = customers[0][i];
+    row.appendChild(headerCell);
   }
 
   //Add the data rows.
   for (var i = 1; i < customers.length; i++) {
-      row = table.insertRow(-1);
-      for (var j = 0; j < columnCount; j++) {
-          var cell = row.insertCell(-1);
-          cell.innerHTML = customers[i][j];
-      }
+    row = table.insertRow(-1);
+    for (var j = 0; j < columnCount; j++) {
+      var cell = row.insertCell(-1);
+      cell.innerHTML = customers[i][j];
+    }
   }
 
   var dvTable = document.getElementById("dvTable");
@@ -261,3 +257,30 @@ let ctaV6 = document.getElementsByName("btnV6")[0];
 ctaV6.addEventListener("click", genTableV6);
 
 /************************V7?************************** */
+
+function genTableV7() {
+  var totalRows = 5;
+  var cellsInRow = 5;
+  var min = 1;
+  var max = 10;
+  var div7 = document.getElementById("div7");
+  var tbl = document.createElement("table");
+  // 1►creating rows
+  for (let i = 0; i < totalRows; i++) {
+    var row = document.createElement("tr");
+    // 2►create cells in row (nested loops)
+    for (let j = 0; j < cellsInRow; j++) {
+      var cell = document.createElement("td");
+      // getRandom = Math.floor(Math.random() * (max - min + 1)) + min;
+      var cellText = document.createTextNode(Math.floor(Math.random() * (max - min + 1)) + min);
+      cell.appendChild(cellText);
+      row.appendChild(cell);
+    }
+    tbl.appendChild(row);
+  }
+
+  div7.appendChild(tbl);
+}
+
+let ctaV7 = document.getElementsByName("btnV7")[0];
+ctaV7.addEventListener("click", genTableV7);
