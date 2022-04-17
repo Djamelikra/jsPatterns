@@ -259,3 +259,5 @@ function genTableV6() {
 
 let ctaV6 = document.getElementsByName("btnV6")[0];
 ctaV6.addEventListener("click", genTableV6);
+
+/************************V7?************************** */
