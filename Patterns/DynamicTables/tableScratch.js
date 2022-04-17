@@ -151,16 +151,16 @@ ctaV4.addEventListener("click", genTableV4);
 
 /************************V5************************** */
 function genTableVx() {
-  //►1
+  //►1 contain
   let contain = document.createElement('div');
   contain.setAttribute('id', 'contain');
   document.body.appendChild(contain);
-   //►2
+   //►2 newTable
    let newTable = document.createElement('table');
    newTable.setAttribute('id', 'newTable');
-  // document.body.appendChild(newTable);
-  contain.appendChild(newTable);
-    //►3
+  document.body.appendChild(newTable);
+  // contain.appendChild(newTable);
+    //►3 tblHeadRow
     let tblHeadRow = newTable.insertRow(0);
     let tblHeadArray = new Array();
     tblHeadArray = ['id','userName','email','birthDate','address'];
@@ -173,12 +173,18 @@ function genTableVx() {
       newTable.setAttribute('width', '10rem');
       newTable.setAttribute('border', '3');
       newTable.setAttribute('cellpadding', '10px');
+  //►5 add Rows
+
+
+
+
+
+
+
 
   contain.style.width = '20rem';
   contain.style.height = '10rem';
-  contain.style.border = "outset 5px green";
-
-
+  contain.style.border = "outset 5px green"
 
  
 }
