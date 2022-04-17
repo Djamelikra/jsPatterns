@@ -134,10 +134,9 @@ function populateTable(newTable, nbrRows, nbrCells, newContent) {
       );
     }
     newTable.appendChild(newRow);
-   
   }
   //add CSS
- 
+
   return newTable;
 }
 function genTableV4() {
@@ -152,43 +151,69 @@ ctaV4.addEventListener("click", genTableV4);
 /************************V5************************** */
 function genTableVx() {
   //►1 contain
-  let contain = document.createElement('div');
-  contain.setAttribute('id', 'contain');
+  let contain = document.createElement("div");
+  contain.setAttribute("id", "contain");
   document.body.appendChild(contain);
-   //►2 newTable HTML table 
-   let newTable = document.createElement('table');
-   newTable.setAttribute('id', 'newTable');
+  //►2 newTable HTML table
+  let newTable = document.createElement("table");
+  newTable.setAttribute("id", "newTable");
   document.body.appendChild(newTable);
   // contain.appendChild(newTable);
-    //►3 Add Table Header
-    let tblHeadRow = newTable.insertRow(0);
-    let tblHeadArray = new Array();
-    tblHeadArray = ['userName','email','tel','birthDate','address'];
-    for (let i = 0; i < tblHeadArray.length; i++) {
-      let th = document.createElement('th');
-      th.innerHTML = tblHeadArray[i];
-      tblHeadRow.appendChild(th);
+  //►3 Add Table Header
+  let tblHeadRow = newTable.insertRow(0);
+  let tblHeadArray = new Array();
+  tblHeadArray = ["userName", "email", "tel", "birthDate","Option"];
+  for (let i = 0; i < tblHeadArray.length; i++) {
+    let th = document.createElement("th");
+    th.innerHTML = tblHeadArray[i];
+    tblHeadRow.appendChild(th);
+  }
+  //►4 CSS
+  newTable.setAttribute("width", "10rem");
+  newTable.setAttribute("border", "3");
+  newTable.setAttribute("cellpadding", "10px");
+
+  //►5 add multiple rows dynamically with a pseudo form
+  document.getElementById("btnAddRow").addEventListener("click", function () {
+    let userName = document.getElementById("userName");
+    let email = document.getElementById("email");
+    let tel = document.getElementById("tel");
+    let birthDate = document.getElementById("birthDate");
+
+    let tr = newTable.insertRow(-1);
+
+    let tblDataArray = new Array();
+    tblDataArray = [userName.value, email.value, tel.value, birthDate.value];
+
+    for (let i = 0; i < tblDataArray.length; i++) {
+      let td = tr.insertCell(-1);
+      td.innerHTML = tblDataArray[i];
     }
-      //►4 CSS
-      newTable.setAttribute('width', '10rem');
-      newTable.setAttribute('border', '3');
-      newTable.setAttribute('cellpadding', '10px');
-  //►5 add multiple rows dynamically
 
+    let td = tr.insertCell(-1);
+    // add a button
+    var btnRemove = document.createElement("button");
+    btnRemove.setAttribute("type", "button");
+    btnRemove.innerHTML = "Remove";
+    btnRemove.setAttribute('onclick','removeRow(this)');
+    td.appendChild(btnRemove);
 
+    userName.value = "";
+    email.value= "";
+    tel.value= "";
+    birthDate.value = "";
 
+  });
 
+  contain.style.width = "20rem";
+  contain.style.height = "10rem";
+  contain.style.border = "outset 5px green";
+}
 
-
-
-
-
-
-  contain.style.width = '20rem';
-  contain.style.height = '10rem';
-  contain.style.border = "outset 5px green"
-
- 
+function removeRow(r) {
+let theTable = document.getElementById('newTable');
+theTable.deleteRow(r.parentNode.parentNode.rowIndex);
+  
 }
 function genTableV5() {
   genTableVx();
