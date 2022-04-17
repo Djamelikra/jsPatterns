@@ -155,15 +155,15 @@ function genTableVx() {
   let contain = document.createElement('div');
   contain.setAttribute('id', 'contain');
   document.body.appendChild(contain);
-   //►2 newTable
+   //►2 newTable HTML table 
    let newTable = document.createElement('table');
    newTable.setAttribute('id', 'newTable');
   document.body.appendChild(newTable);
   // contain.appendChild(newTable);
-    //►3 tblHeadRow
+    //►3 Add Table Header
     let tblHeadRow = newTable.insertRow(0);
     let tblHeadArray = new Array();
-    tblHeadArray = ['id','userName','email','birthDate','address'];
+    tblHeadArray = ['userName','email','tel','birthDate','address'];
     for (let i = 0; i < tblHeadArray.length; i++) {
       let th = document.createElement('th');
       th.innerHTML = tblHeadArray[i];
@@ -173,7 +173,9 @@ function genTableVx() {
       newTable.setAttribute('width', '10rem');
       newTable.setAttribute('border', '3');
       newTable.setAttribute('cellpadding', '10px');
-  //►5 add Rows
+  //►5 add multiple rows dynamically
+
+
 
 
 
