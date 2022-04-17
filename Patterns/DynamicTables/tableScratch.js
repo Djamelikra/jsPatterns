@@ -149,11 +149,11 @@ let ctaV4 = document.getElementsByName("btnV4")[0];
 ctaV4.addEventListener("click", genTableV4);
 
 /************************V5************************** */
-function genTableVx() {
-  //►1 contain
-  let contain = document.createElement("div");
-  contain.setAttribute("id", "contain");
-  document.body.appendChild(contain);
+function genTableV5() {
+  // //►1 contain
+  // let contain = document.createElement("div");
+  // contain.setAttribute("id", "contain");
+  // document.body.appendChild(contain);
   //►2 newTable HTML table
   let newTable = document.createElement("table");
   newTable.setAttribute("id", "newTable");
@@ -172,6 +172,7 @@ function genTableVx() {
   newTable.setAttribute("width", "10rem");
   newTable.setAttribute("border", "3");
   newTable.setAttribute("cellpadding", "10px");
+  newTable.style.border = "outset 5px green";
 
   //►5 add multiple rows dynamically with a pseudo form
   document.getElementById("btnAddRow").addEventListener("click", function () {
@@ -205,9 +206,7 @@ function genTableVx() {
 
   });
 
-  contain.style.width = "20rem";
-  contain.style.height = "10rem";
-  contain.style.border = "outset 5px green";
+
 }
 
 function removeRow(r) {
@@ -215,12 +214,12 @@ let theTable = document.getElementById('newTable');
 theTable.deleteRow(r.parentNode.parentNode.rowIndex);
   
 }
-function genTableV5() {
-  genTableVx();
-  // document
-  //   .getElementById("tbl")
-  //   .appendChild(populateTable(null, 5, 3, "div padding text"));
-}
+// function genTableV5() {
+//   genTableVx();
+//   // document
+//   //   .getElementById("tbl")
+//   //   .appendChild(populateTable(null, 5, 3, "div padding text"));
+// }
 
 let ctaV5 = document.getElementsByName("btnV5")[0];
 ctaV5.addEventListener("click", genTableV5);
