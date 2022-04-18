@@ -50,11 +50,6 @@ function addBtnAdd() {
   btnAddRow.innerHTML = "Add a Row";
   let parentNode = document.getElementById('newFrm');
   parentNode.appendChild(btnAddRow);
-
-  // user.value = "";
-  // email.value = "";
-  // pwd.value = "";
-  
 }
 
 function addRow() {
