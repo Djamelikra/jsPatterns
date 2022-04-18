@@ -32,7 +32,23 @@ function generateTable() {
     newTable.setAttribute("cellpadding", "10px");
     newTable.style.border = "outset 5px green";
 
+ //►4 add multiple rows dynamically with a pseudo form
 
+
+}
+
+function addRow() {
+  let user = document.getElementById("user");
+  let email = document.getElementById("email");
+  let tel = document.getElementById("tel");
+  
+}
+
+function addForm() {
+  let user = document.getElementById("user");
+  let email = document.getElementById("email");
+  let tel = document.getElementById("tel");
+  
 }
 
 generateTable();
