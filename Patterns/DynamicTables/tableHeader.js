@@ -11,34 +11,21 @@ function generateTable() {
   document.body.appendChild(newDiv);
 
 //   //►1 newTable HTML table
-//   var newTable = document.createElement("table");
-//   newTable.setAttribute("id", "newTable");
-//   document.body.appendChild(newTable);
-// //   document.getElementById("tableZone").appendChild(newTable);
-
-//   //►2 Add Table Header
-//   let headerRow = newTable.insertRow(0);
-//   let headerRowArr = new Array();
-//   headerRowArr = ['user','email','password','Option'];
-//   for (let i = 0; i < headerRowArr.length; i++) {
-//       let th = document.createElement('th');
-//       th.innerHTML = headerRowArr[i];
-//       headerRowArr.appendChild(th);
-//   }
-  //►2 newTable HTML table
-  let newTable = document.createElement("table");
+  var newTable = document.createElement("table");
   newTable.setAttribute("id", "newTable");
   document.body.appendChild(newTable);
-  // contain.appendChild(newTable);
-  //►3 Add Table Header
-  let tblHeadRow = newTable.insertRow(0);
-  let tblHeadArray = new Array();
-  tblHeadArray = ["userName", "email", "tel", "birthDate", "Option"];
-  for (let i = 0; i < tblHeadArray.length; i++) {
-    let th = document.createElement("th");
-    th.innerHTML = tblHeadArray[i];
-    tblHeadRow.appendChild(th);
+//   document.getElementById("tableZone").appendChild(newTable);
+
+  //►2 Add Table Header
+  let headerRow = newTable.insertRow(0);
+  let headerRowArr = new Array();
+  headerRowArr = ['user','email','password','Option'];
+  for (let i = 0; i < headerRowArr.length; i++) {
+      let th = document.createElement('th');
+      th.innerHTML = headerRowArr[i];
+      headerRow.appendChild(th);
   }
+
     //►3 CSS
     newTable.setAttribute("width", "10rem");
     newTable.setAttribute("border", "3");
